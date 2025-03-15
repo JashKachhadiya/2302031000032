@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fino - Tracker Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Navbar (Header) */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .navbar .logo span {
+            color: #d9e6f2;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Section */
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: #f8f9fa;
+        }
+
+        /* Left side - Welcome text */
+        .text-left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .text-left h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .text-left p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Right side - Login Form */
+        .login-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding-left: 50px;
+        }
+
+        .login-right form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-right form label {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .login-right form input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-right form .login-btn {
+            background-color: #007BFF;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .login-right form .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .login-right form a {
+            color: #007BFF;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .login-right form a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #f3f7f7;
+            color: #1d5b4f;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-size: 14px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footer-column a {
+            color: #1d5b4f;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        .company-info {
+            max-width: 250px;
+        }
+
+        .company-info p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            line-height: 1.6;
+        }
+
+        .contact-info a {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .privacy-policy {
+            text-align: right;
+        }
+
+        .privacy-policy a {
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        .privacy-policy a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (Header) -->
+    <div class="navbar">
+        <div class="logo">
+            Fino<span> Finance Tracker</span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="market.html">Market</a>
+            <a href="news.html">News</a>
+            <a href="login.html">Login</a>
+            <a href="invest-now.html">Invest Now</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="tracker.html">Tracker</a>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <main>
+        <!-- Left section - Welcome text -->
+        <div class="text-left">
+            <h1>Welcome to Fino’s Tracker</h1>
+            <p>Select your investment, manage your expenses, and save money for a brighter future.</p>
+        </div>
+
+        <!-- Right section - Login Form -->
+        <div class="login-right">
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <a href="forgot-password.html">Forgot Password?</a>
+
+                <button type="submit" class="login-btn">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column company-info">
+            <p>We're simplifying financial management with intuitive tools to track your expenses.</p>
+            <p>© Fino 2021</p>
+        </div>
+    
+        <div class="footer-column">
+            <h4>Resources</h4>
+            <a href="about-us.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="#">Features</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+    
+        <div class="footer-column contact-info">
+            <h4>Contact</h4>
+            <a href="tel:18002343432">1 800 234 3432</a>
+            <a href="mailto:hello@fino.com">hello@fino.com</a>
+        </div>
+    
+        <div class="footer-column privacy-policy">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </div>
+    </footer>
+
+</body>
+</html>

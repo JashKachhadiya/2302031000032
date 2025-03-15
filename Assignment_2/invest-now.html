@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fino - Invest Now</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Navbar (Header) */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .navbar .logo span {
+            color: #d9e6f2;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Section */
+        main {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        .invest-form-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .invest-form-container h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .invest-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .invest-form label {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .invest-form input, .invest-form select, .invest-form textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            outline: none;
+        }
+
+        .invest-form select {
+            height: 40px;
+        }
+
+        .submit-btn {
+            background-color: #007BFF;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #f3f7f7;
+            color: #1d5b4f;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-size: 14px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footer-column a {
+            color: #1d5b4f;
+            text-decoration: none;
+            margin-bottom: 5px;
+        }
+
+        .footer-column a:hover {
+            text-decoration: underline;
+        }
+
+        .company-info {
+            max-width: 250px;
+        }
+
+        .company-info p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            line-height: 1.6;
+        }
+
+        .contact-info a {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .privacy-policy {
+            text-align: right;
+        }
+
+        .privacy-policy a {
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        .privacy-policy a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (Header) -->
+    <div class="navbar">
+        <div class="logo">
+            Fino<span> Finance Tracker</span>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="market.html">Market</a>
+            <a href="news.html">News</a>
+            <a href="login.html">Login</a>
+            <a href="invest-now.html">Invest Now</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="tracker.html">Tracker</a>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <main>
+        <div class="invest-form-container">
+            <h1>Invest Now</h1>
+            <form class="invest-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+                <label for="investment-type">Investment Type</label>
+                <select id="investment-type" name="investment-type" required>
+                    <option value="">Select an investment type</option>
+                    <option value="stocks">Stocks</option>
+                    <option value="bonds">Bonds</option>
+                    <option value="crypto">Cryptocurrency</option>
+                    <option value="mutual-funds">Mutual Funds</option>
+                    <option value="real-estate">Real Estate</option>
+                </select>
+
+                <label for="amount">Investment Amount</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter the amount you want to invest" required>
+
+                <label for="additional-info">Additional Information</label>
+                <textarea id="additional-info" name="additional-info" placeholder="Provide any additional details..." rows="4"></textarea>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column company-info">
+            <p>We're simplifying financial management with intuitive tools to track your expenses.</p>
+            <p>© Fino 2021</p>
+        </div>
+    
+        <div class="footer-column">
+            <h4>Resources</h4>
+            <a href="about-us.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="#">Features</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+    
+        <div class="footer-column contact-info">
+            <h4>Contact</h4>
+            <a href="tel:18002343432">1 800 234 3432</a>
+            <a href="mailto:hello@fino.com">hello@fino.com</a>
+        </div>
+    
+        <div class="footer-column privacy-policy">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </div>
+    </footer>
+
+</body>
+</html>
